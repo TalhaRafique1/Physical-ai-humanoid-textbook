@@ -56,20 +56,24 @@ This approach deploys both frontend and backend together using Docker Compose:
    railway login
    ```
 
-3. **Deploy the backend**
-   - Navigate to the `backend` directory
+3. **Deploy the full application using Docker**
+   - Make sure your GitHub repository has the updated Dockerfile that references the `website` directory
    - Connect your GitHub repository to Railway
-   - Or use the CLI:
-     ```bash
-     cd backend
-     railway init
-     railway link
-     railway up
-     ```
+   - Railway will automatically detect the Dockerfile and build your application
+   - If you encounter build issues, try forcing a rebuild without cache in the Railway dashboard
 
-4. **Get the backend URL**
+4. **Deploy backend and frontend separately (Alternative approach)**
+   - For the backend: Connect the `backend` directory to Railway
+   - For the frontend: Deploy the Docusaurus site to Vercel/Netlify and configure it to connect to your backend API
+
+5. **Get the backend URL**
    - After deployment, Railway will provide a URL like `https://your-app-name.up.railway.app`
    - Note this URL as you'll need it for frontend configuration
+
+6. **Configure environment variables in Railway**
+   - DATABASE_URL: Your PostgreSQL connection string
+   - DEBUG: Set to "true" for development or "false" for production
+   - Any other environment variables your application needs
 
 #### Option B: Deploy to Render
 
@@ -238,6 +242,21 @@ Both Vercel and Netlify allow you to add custom domains:
 1. **CORS errors**: Make sure your backend allows requests from your frontend domain
 2. **API not responding**: Verify that your backend URL is correct in the frontend
 3. **Build failures**: Check that all dependencies are properly listed in package.json
+
+### Railway-Specific Issues:
+
+1. **Docker build failures on Railway**:
+   - Make sure your Dockerfile references the correct directories (`website` instead of `frontend`)
+   - In the Railway dashboard, go to your project → Build → "Rebuild without cache" to force a fresh build
+   - Ensure all required files (like `website/nginx.conf`) exist in your repository
+
+2. **Port configuration**:
+   - Make sure your application listens on the port specified by the `PORT` environment variable in Railway
+   - The backend should use the `$PORT` environment variable instead of a fixed port
+
+3. **Environment variables**:
+   - Set DATABASE_URL, DEBUG, and other required environment variables in the Railway dashboard
+   - For the frontend, if deploying separately, ensure REACT_APP_API_URL points to your Railway backend URL
 
 ### Backend CORS Configuration:
 

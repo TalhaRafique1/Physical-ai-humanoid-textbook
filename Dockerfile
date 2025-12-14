@@ -31,18 +31,16 @@ FROM node:18 as docusaurus-build
 WORKDIR /app/website
 
 # Copy package files
-COPY website/package*.json ./
-
-# Install dependencies
+COPY ./website/package*.json ./
 RUN npm ci
 
 # Copy source code
-COPY website/src ./src
-COPY website/docs ./docs
-COPY website/static ./static
-COPY website/docusaurus.config.js ./
-COPY website/sidebars.js ./
-COPY website/tsconfig.json ./
+COPY ./website/src ./src
+COPY ./website/docs ./docs
+COPY ./website/static ./static
+COPY ./website/docusaurus.config.js ./
+COPY ./website/sidebars.js ./
+COPY ./website/tsconfig.json ./
 
 # Build the Docusaurus site
 RUN npm run build
@@ -55,7 +53,7 @@ FROM nginx:alpine as frontend
 COPY --from=docusaurus-build /app/website/build /usr/share/nginx/html
 
 # Copy custom nginx configuration
-COPY website/nginx.conf /etc/nginx/nginx.conf
+COPY ./website/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 
