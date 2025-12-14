@@ -47,8 +47,11 @@ const ChatWidget = () => {
 
     try {
       // Call the backend RAG API
-      // Using relative path that will be proxied during development
-      const response = await fetch('/api/rag/query', {
+      // Using environment variable for flexibility in different environments
+      const BACKEND_URL = process.env.REACT_APP_API_URL || '';
+      const apiUrl = BACKEND_URL ? `${BACKEND_URL}/api/rag/query` : '/api/rag/query';
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

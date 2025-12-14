@@ -175,17 +175,20 @@ Before deploying the frontend, you need to update the ChatWidget to point to you
    - Sign up with your GitHub account
 
 2. **Deploy the website**
-   - Navigate to the `website` directory
-   - Install dependencies: `npm install`
-   - Build the site: `npm run build`
    - Connect your GitHub repository to Vercel
-   - Set the root directory to `website`
-   - Set build command: `npm run build`
-   - Set output directory: `build`
+   - In the Vercel dashboard, set the following configuration:
+     - Framework preset: "Docusaurus"
+     - Root directory: `website`
+     - Build command: `npm run build` (or leave empty to auto-detect)
+     - Output directory: `build`
 
 3. **Add environment variables in Vercel dashboard**
-   - Go to your project settings
-   - Add environment variable: `REACT_APP_API_URL` with your backend URL
+   - Go to your project settings → Environment Variables
+   - Add: `REACT_APP_API_URL` with your backend API URL (e.g., https://your-backend-app.up.railway.app)
+
+4. **For Vercel deployment, ensure your docusaurus.config.js doesn't contain development-only plugins**
+   - Remove any development-specific webpack configuration
+   - Use only production-ready configurations
 
 #### Option B: Deploy to Netlify
 
