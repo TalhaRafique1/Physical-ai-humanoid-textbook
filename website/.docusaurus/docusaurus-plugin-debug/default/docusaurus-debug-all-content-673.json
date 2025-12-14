@@ -1,0 +1,684 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs",
+          "editUrlLocalized": "https://github.com/ai-textbook-project/textbook/tree/main/website/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "C:\\Users\\Shoaib Computers\\Desktop\\book\\website\\sidebars.js",
+          "contentPath": "C:\\Users\\Shoaib Computers\\Desktop\\book\\website\\docs",
+          "contentPathLocalized": "C:\\Users\\Shoaib Computers\\Desktop\\book\\website\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "id": "applications/chapter-1-industrial-applications",
+              "title": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
+              "description": "Learning Objectives",
+              "source": "@site/docs/applications/chapter-1-industrial-applications.md",
+              "sourceDirName": "applications",
+              "slug": "/applications/chapter-1-industrial-applications",
+              "permalink": "/docs/applications/chapter-1-industrial-applications",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-1-industrial-applications.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
+                "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence"
+              },
+              "next": {
+                "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/applications/chapter-2-healthcare-applications"
+              }
+            },
+            {
+              "id": "applications/chapter-2-healthcare-applications",
+              "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
+              "description": "Learning Objectives",
+              "source": "@site/docs/applications/chapter-2-healthcare-applications.md",
+              "sourceDirName": "applications",
+              "slug": "/applications/chapter-2-healthcare-applications",
+              "permalink": "/docs/applications/chapter-2-healthcare-applications",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-2-healthcare-applications.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/applications/chapter-1-industrial-applications"
+              },
+              "next": {
+                "title": "Chapter 3: Domestic Applications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/applications/chapter-3-domestic-applications"
+              }
+            },
+            {
+              "id": "applications/chapter-3-domestic-applications",
+              "title": "Chapter 3: Domestic Applications of Physical AI and Humanoid Robotics",
+              "description": "Learning Objectives",
+              "source": "@site/docs/applications/chapter-3-domestic-applications.md",
+              "sourceDirName": "applications",
+              "slug": "/applications/chapter-3-domestic-applications",
+              "permalink": "/docs/applications/chapter-3-domestic-applications",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-3-domestic-applications.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/applications/chapter-2-healthcare-applications"
+              },
+              "next": {
+                "title": "Chapter 1: Technological Advances in Physical AI and Humanoid Robotics",
+                "permalink": "/docs/future-perspectives/chapter-1-technological-advances"
+              }
+            },
+            {
+              "id": "future-perspectives/chapter-1-technological-advances",
+              "title": "Chapter 1: Technological Advances in Physical AI and Humanoid Robotics",
+              "description": "Learning Objectives",
+              "source": "@site/docs/future-perspectives/chapter-1-technological-advances.md",
+              "sourceDirName": "future-perspectives",
+              "slug": "/future-perspectives/chapter-1-technological-advances",
+              "permalink": "/docs/future-perspectives/chapter-1-technological-advances",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/future-perspectives/chapter-1-technological-advances.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 3: Domestic Applications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/applications/chapter-3-domestic-applications"
+              },
+              "next": {
+                "title": "Chapter 2: Societal Implications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/future-perspectives/chapter-2-societal-implications"
+              }
+            },
+            {
+              "id": "future-perspectives/chapter-2-societal-implications",
+              "title": "Chapter 2: Societal Implications of Physical AI and Humanoid Robotics",
+              "description": "Learning Objectives",
+              "source": "@site/docs/future-perspectives/chapter-2-societal-implications.md",
+              "sourceDirName": "future-perspectives",
+              "slug": "/future-perspectives/chapter-2-societal-implications",
+              "permalink": "/docs/future-perspectives/chapter-2-societal-implications",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/future-perspectives/chapter-2-societal-implications.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 1: Technological Advances in Physical AI and Humanoid Robotics",
+                "permalink": "/docs/future-perspectives/chapter-1-technological-advances"
+              },
+              "next": {
+                "title": "Summary and Next Steps",
+                "permalink": "/docs/summary"
+              }
+            },
+            {
+              "id": "getting-started/introduction",
+              "title": "Getting Started with Physical AI",
+              "description": "Welcome to Physical AI & Humanoid Robotics",
+              "source": "@site/docs/getting-started/introduction.md",
+              "sourceDirName": "getting-started",
+              "slug": "/getting-started/introduction",
+              "permalink": "/docs/getting-started/introduction",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/getting-started/introduction.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Introduction to Physical AI & Humanoid Robotics",
+                "permalink": "/docs/intro"
+              },
+              "next": {
+                "title": "Setup and Installation",
+                "permalink": "/docs/getting-started/setup"
+              }
+            },
+            {
+              "id": "getting-started/setup",
+              "title": "Setup and Installation",
+              "description": "Learning Objectives",
+              "source": "@site/docs/getting-started/setup.md",
+              "sourceDirName": "getting-started",
+              "slug": "/getting-started/setup",
+              "permalink": "/docs/getting-started/setup",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/getting-started/setup.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Getting Started with Physical AI",
+                "permalink": "/docs/getting-started/introduction"
+              },
+              "next": {
+                "title": "Chapter 1: Introduction to Physical AI",
+                "permalink": "/docs/physical-ai/chapter-1-introduction"
+              }
+            },
+            {
+              "id": "humanoid-robotics/chapter-1-introduction-to-humanoids",
+              "title": "Chapter 1: Introduction to Humanoid Robotics",
+              "description": "Learning Objectives",
+              "source": "@site/docs/humanoid-robotics/chapter-1-introduction-to-humanoids.md",
+              "sourceDirName": "humanoid-robotics",
+              "slug": "/humanoid-robotics/chapter-1-introduction-to-humanoids",
+              "permalink": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-1-introduction-to-humanoids.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 6: Embodiment and Cognition in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-6-embodiment-and-cognition"
+              },
+              "next": {
+                "title": "Chapter 2: Bipedal Locomotion in Humanoid Robots",
+                "permalink": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion"
+              }
+            },
+            {
+              "id": "humanoid-robotics/chapter-2-bipedal-locomotion",
+              "title": "Chapter 2: Bipedal Locomotion in Humanoid Robots",
+              "description": "Learning Objectives",
+              "source": "@site/docs/humanoid-robotics/chapter-2-bipedal-locomotion.md",
+              "sourceDirName": "humanoid-robotics",
+              "slug": "/humanoid-robotics/chapter-2-bipedal-locomotion",
+              "permalink": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-2-bipedal-locomotion.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 1: Introduction to Humanoid Robotics",
+                "permalink": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids"
+              },
+              "next": {
+                "title": "Chapter 3: Humanoid Manipulation and Dexterity",
+                "permalink": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation"
+              }
+            },
+            {
+              "id": "humanoid-robotics/chapter-3-humanoid-manipulation",
+              "title": "Chapter 3: Humanoid Manipulation and Dexterity",
+              "description": "Learning Objectives",
+              "source": "@site/docs/humanoid-robotics/chapter-3-humanoid-manipulation.md",
+              "sourceDirName": "humanoid-robotics",
+              "slug": "/humanoid-robotics/chapter-3-humanoid-manipulation",
+              "permalink": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-3-humanoid-manipulation.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2: Bipedal Locomotion in Humanoid Robots",
+                "permalink": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion"
+              },
+              "next": {
+                "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
+                "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence"
+              }
+            },
+            {
+              "id": "humanoid-robotics/chapter-4-humanoid-intelligence",
+              "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
+              "description": "Learning Objectives",
+              "source": "@site/docs/humanoid-robotics/chapter-4-humanoid-intelligence.md",
+              "sourceDirName": "humanoid-robotics",
+              "slug": "/humanoid-robotics/chapter-4-humanoid-intelligence",
+              "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-4-humanoid-intelligence.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 3: Humanoid Manipulation and Dexterity",
+                "permalink": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation"
+              },
+              "next": {
+                "title": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/applications/chapter-1-industrial-applications"
+              }
+            },
+            {
+              "id": "intro",
+              "title": "Introduction to Physical AI & Humanoid Robotics",
+              "description": "Welcome to the AI-Native Interactive Textbook on Physical AI & Humanoid Robotics! This textbook leverages cutting-edge AI technology to provide an engaging and personalized learning experience.",
+              "source": "@site/docs/intro.md",
+              "sourceDirName": ".",
+              "slug": "/intro",
+              "permalink": "/docs/intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/intro.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Getting Started with Physical AI",
+                "permalink": "/docs/getting-started/introduction"
+              }
+            },
+            {
+              "id": "physical-ai/chapter-1-introduction",
+              "title": "Chapter 1: Introduction to Physical AI",
+              "description": "Learning Objectives",
+              "source": "@site/docs/physical-ai/chapter-1-introduction.md",
+              "sourceDirName": "physical-ai",
+              "slug": "/physical-ai/chapter-1-introduction",
+              "permalink": "/docs/physical-ai/chapter-1-introduction",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-1-introduction.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Setup and Installation",
+                "permalink": "/docs/getting-started/setup"
+              },
+              "next": {
+                "title": "Chapter 2: Sensing and Perception in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-2-sensing-and-perception"
+              }
+            },
+            {
+              "id": "physical-ai/chapter-2-sensing-and-perception",
+              "title": "Chapter 2: Sensing and Perception in Physical AI",
+              "description": "Learning Objectives",
+              "source": "@site/docs/physical-ai/chapter-2-sensing-and-perception.md",
+              "sourceDirName": "physical-ai",
+              "slug": "/physical-ai/chapter-2-sensing-and-perception",
+              "permalink": "/docs/physical-ai/chapter-2-sensing-and-perception",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-2-sensing-and-perception.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 1: Introduction to Physical AI",
+                "permalink": "/docs/physical-ai/chapter-1-introduction"
+              },
+              "next": {
+                "title": "Chapter 3: Motion and Control in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-3-motion-and-control"
+              }
+            },
+            {
+              "id": "physical-ai/chapter-3-motion-and-control",
+              "title": "Chapter 3: Motion and Control in Physical AI",
+              "description": "Learning Objectives",
+              "source": "@site/docs/physical-ai/chapter-3-motion-and-control.md",
+              "sourceDirName": "physical-ai",
+              "slug": "/physical-ai/chapter-3-motion-and-control",
+              "permalink": "/docs/physical-ai/chapter-3-motion-and-control",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-3-motion-and-control.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2: Sensing and Perception in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-2-sensing-and-perception"
+              },
+              "next": {
+                "title": "Chapter 4: Learning and Adaptation in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-4-learning-and-adaptation"
+              }
+            },
+            {
+              "id": "physical-ai/chapter-4-learning-and-adaptation",
+              "title": "Chapter 4: Learning and Adaptation in Physical AI",
+              "description": "Learning Objectives",
+              "source": "@site/docs/physical-ai/chapter-4-learning-and-adaptation.md",
+              "sourceDirName": "physical-ai",
+              "slug": "/physical-ai/chapter-4-learning-and-adaptation",
+              "permalink": "/docs/physical-ai/chapter-4-learning-and-adaptation",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-4-learning-and-adaptation.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 3: Motion and Control in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-3-motion-and-control"
+              },
+              "next": {
+                "title": "Chapter 5: Human-Robot Interaction in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-5-human-robot-interaction"
+              }
+            },
+            {
+              "id": "physical-ai/chapter-5-human-robot-interaction",
+              "title": "Chapter 5: Human-Robot Interaction in Physical AI",
+              "description": "Learning Objectives",
+              "source": "@site/docs/physical-ai/chapter-5-human-robot-interaction.md",
+              "sourceDirName": "physical-ai",
+              "slug": "/physical-ai/chapter-5-human-robot-interaction",
+              "permalink": "/docs/physical-ai/chapter-5-human-robot-interaction",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-5-human-robot-interaction.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 4: Learning and Adaptation in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-4-learning-and-adaptation"
+              },
+              "next": {
+                "title": "Chapter 6: Embodiment and Cognition in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-6-embodiment-and-cognition"
+              }
+            },
+            {
+              "id": "physical-ai/chapter-6-embodiment-and-cognition",
+              "title": "Chapter 6: Embodiment and Cognition in Physical AI",
+              "description": "Learning Objectives",
+              "source": "@site/docs/physical-ai/chapter-6-embodiment-and-cognition.md",
+              "sourceDirName": "physical-ai",
+              "slug": "/physical-ai/chapter-6-embodiment-and-cognition",
+              "permalink": "/docs/physical-ai/chapter-6-embodiment-and-cognition",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-6-embodiment-and-cognition.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "sidebar_position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 5: Human-Robot Interaction in Physical AI",
+                "permalink": "/docs/physical-ai/chapter-5-human-robot-interaction"
+              },
+              "next": {
+                "title": "Chapter 1: Introduction to Humanoid Robotics",
+                "permalink": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids"
+              }
+            },
+            {
+              "id": "summary",
+              "title": "Summary and Next Steps",
+              "description": "Course Completion",
+              "source": "@site/docs/summary.md",
+              "sourceDirName": ".",
+              "slug": "/summary",
+              "permalink": "/docs/summary",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/summary.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 100,
+              "frontMatter": {
+                "sidebar_position": 100
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 2: Societal Implications of Physical AI and Humanoid Robotics",
+                "permalink": "/docs/future-perspectives/chapter-2-societal-implications"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "intro"
+              },
+              {
+                "type": "category",
+                "label": "Getting Started",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "getting-started/introduction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "getting-started/setup"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Physical AI",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "physical-ai/chapter-1-introduction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physical-ai/chapter-2-sensing-and-perception"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physical-ai/chapter-3-motion-and-control"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physical-ai/chapter-4-learning-and-adaptation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physical-ai/chapter-5-human-robot-interaction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "physical-ai/chapter-6-embodiment-and-cognition"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Humanoid Robotics",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "humanoid-robotics/chapter-1-introduction-to-humanoids"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "humanoid-robotics/chapter-2-bipedal-locomotion"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "humanoid-robotics/chapter-3-humanoid-manipulation"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "humanoid-robotics/chapter-4-humanoid-intelligence"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Applications",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "applications/chapter-1-industrial-applications"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "applications/chapter-2-healthcare-applications"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "applications/chapter-3-domestic-applications"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Future Perspectives",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "future-perspectives/chapter-1-technological-advances"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "future-perspectives/chapter-2-societal-implications"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Summary",
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "summary"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [],
+      "blogListPaginated": [],
+      "blogTags": {},
+      "blogTagsListPath": "/blog/tags",
+      "blogTagsPaginated": []
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.jsx"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

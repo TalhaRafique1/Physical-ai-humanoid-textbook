@@ -1,0 +1,27 @@
+{
+  "id": "getting-started/introduction",
+  "title": "Getting Started with Physical AI",
+  "description": "Welcome to Physical AI & Humanoid Robotics",
+  "source": "@site/docs/getting-started/introduction.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/introduction",
+  "permalink": "/docs/getting-started/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/getting-started/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to Physical AI & Humanoid Robotics",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Setup and Installation",
+    "permalink": "/docs/getting-started/setup"
+  }
+}

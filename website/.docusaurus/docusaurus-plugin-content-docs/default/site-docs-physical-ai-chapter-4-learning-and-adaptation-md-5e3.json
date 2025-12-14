@@ -1,0 +1,27 @@
+{
+  "id": "physical-ai/chapter-4-learning-and-adaptation",
+  "title": "Chapter 4: Learning and Adaptation in Physical AI",
+  "description": "Learning Objectives",
+  "source": "@site/docs/physical-ai/chapter-4-learning-and-adaptation.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/chapter-4-learning-and-adaptation",
+  "permalink": "/docs/physical-ai/chapter-4-learning-and-adaptation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-4-learning-and-adaptation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3: Motion and Control in Physical AI",
+    "permalink": "/docs/physical-ai/chapter-3-motion-and-control"
+  },
+  "next": {
+    "title": "Chapter 5: Human-Robot Interaction in Physical AI",
+    "permalink": "/docs/physical-ai/chapter-5-human-robot-interaction"
+  }
+}

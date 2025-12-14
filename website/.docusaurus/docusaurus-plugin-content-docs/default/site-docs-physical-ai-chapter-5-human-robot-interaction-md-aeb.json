@@ -1,0 +1,27 @@
+{
+  "id": "physical-ai/chapter-5-human-robot-interaction",
+  "title": "Chapter 5: Human-Robot Interaction in Physical AI",
+  "description": "Learning Objectives",
+  "source": "@site/docs/physical-ai/chapter-5-human-robot-interaction.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/chapter-5-human-robot-interaction",
+  "permalink": "/docs/physical-ai/chapter-5-human-robot-interaction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-5-human-robot-interaction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Learning and Adaptation in Physical AI",
+    "permalink": "/docs/physical-ai/chapter-4-learning-and-adaptation"
+  },
+  "next": {
+    "title": "Chapter 6: Embodiment and Cognition in Physical AI",
+    "permalink": "/docs/physical-ai/chapter-6-embodiment-and-cognition"
+  }
+}

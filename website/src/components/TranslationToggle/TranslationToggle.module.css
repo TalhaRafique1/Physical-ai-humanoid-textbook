@@ -1,0 +1,155 @@
+.translationToggle {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+  z-index: 100;
+}
+
+.toggleButton {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 2px solid #bbdefb;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.toggleButton:hover {
+  background-color: #bbdefb;
+  border-color: #90caf9;
+}
+
+.toggleButton.expanded {
+  background-color: #bbdefb;
+  border-color: #64b5f6;
+}
+
+.lightMode .toggleButton {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border-color: #bbdefb;
+}
+
+.darkMode .toggleButton {
+  background-color: #1a202c;
+  color: #90cdf4;
+  border-color: #2d3748;
+}
+
+.languageCode {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font-size: 0.7rem;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 200px;
+  margin-top: 4px;
+  overflow: hidden;
+  z-index: 101;
+}
+
+.darkMode .dropdown {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdownHeader {
+  padding: 10px 15px;
+  background-color: #f5f5f5;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.darkMode .dropdownHeader {
+  background-color: #4a5568;
+  border-bottom-color: #718096;
+  color: white;
+}
+
+.languageList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.languageOption {
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.15s ease;
+}
+
+.languageOption:hover {
+  background-color: #f0f0f0;
+}
+
+.languageOption.active {
+  background-color: #e3f2fd;
+  font-weight: 500;
+}
+
+.darkMode .languageOption:hover {
+  background-color: #4a5568;
+}
+
+.darkMode .languageOption.active {
+  background-color: #2b6cb0;
+}
+
+.languageName {
+  display: flex;
+  flex-direction: column;
+}
+
+.languageEnglishName {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.darkMode .languageEnglishName {
+  color: #a0aec0;
+}
+
+.checkmark {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 180px;
+  }
+
+  .toggleButton {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}

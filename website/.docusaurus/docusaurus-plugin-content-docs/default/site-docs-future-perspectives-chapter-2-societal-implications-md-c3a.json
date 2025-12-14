@@ -1,0 +1,27 @@
+{
+  "id": "future-perspectives/chapter-2-societal-implications",
+  "title": "Chapter 2: Societal Implications of Physical AI and Humanoid Robotics",
+  "description": "Learning Objectives",
+  "source": "@site/docs/future-perspectives/chapter-2-societal-implications.md",
+  "sourceDirName": "future-perspectives",
+  "slug": "/future-perspectives/chapter-2-societal-implications",
+  "permalink": "/docs/future-perspectives/chapter-2-societal-implications",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/future-perspectives/chapter-2-societal-implications.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1: Technological Advances in Physical AI and Humanoid Robotics",
+    "permalink": "/docs/future-perspectives/chapter-1-technological-advances"
+  },
+  "next": {
+    "title": "Summary and Next Steps",
+    "permalink": "/docs/summary"
+  }
+}

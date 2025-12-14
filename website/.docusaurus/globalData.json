@@ -1,0 +1,123 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "applications/chapter-1-industrial-applications",
+              "path": "/docs/applications/chapter-1-industrial-applications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "applications/chapter-2-healthcare-applications",
+              "path": "/docs/applications/chapter-2-healthcare-applications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "applications/chapter-3-domestic-applications",
+              "path": "/docs/applications/chapter-3-domestic-applications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "future-perspectives/chapter-1-technological-advances",
+              "path": "/docs/future-perspectives/chapter-1-technological-advances",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "future-perspectives/chapter-2-societal-implications",
+              "path": "/docs/future-perspectives/chapter-2-societal-implications",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/introduction",
+              "path": "/docs/getting-started/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/setup",
+              "path": "/docs/getting-started/setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "humanoid-robotics/chapter-1-introduction-to-humanoids",
+              "path": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "humanoid-robotics/chapter-2-bipedal-locomotion",
+              "path": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "humanoid-robotics/chapter-3-humanoid-manipulation",
+              "path": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "humanoid-robotics/chapter-4-humanoid-intelligence",
+              "path": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai/chapter-1-introduction",
+              "path": "/docs/physical-ai/chapter-1-introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai/chapter-2-sensing-and-perception",
+              "path": "/docs/physical-ai/chapter-2-sensing-and-perception",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai/chapter-3-motion-and-control",
+              "path": "/docs/physical-ai/chapter-3-motion-and-control",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai/chapter-4-learning-and-adaptation",
+              "path": "/docs/physical-ai/chapter-4-learning-and-adaptation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai/chapter-5-human-robot-interaction",
+              "path": "/docs/physical-ai/chapter-5-human-robot-interaction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "physical-ai/chapter-6-embodiment-and-cognition",
+              "path": "/docs/physical-ai/chapter-6-embodiment-and-cognition",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "summary",
+              "path": "/docs/summary",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

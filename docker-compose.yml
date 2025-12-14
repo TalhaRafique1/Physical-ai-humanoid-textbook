@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://textbook_user:textbook_password@db:5432/textbook_generation
+      - DEBUG=true
+    depends_on:
+      - db
+    volumes:
+      - ./backend/src:/app/backend/src  # For development
+    networks:
+      - textbook-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - textbook-network
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: textbook_generation
+      POSTGRES_USER: textbook_user
+      POSTGRES_PASSWORD: textbook_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - textbook-network
+
+volumes:
+  postgres_data:
+
+networks:
+  textbook-network:
+    driver: bridge

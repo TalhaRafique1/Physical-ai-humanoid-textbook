@@ -1,0 +1,27 @@
+{
+  "id": "applications/chapter-2-healthcare-applications",
+  "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
+  "description": "Learning Objectives",
+  "source": "@site/docs/applications/chapter-2-healthcare-applications.md",
+  "sourceDirName": "applications",
+  "slug": "/applications/chapter-2-healthcare-applications",
+  "permalink": "/docs/applications/chapter-2-healthcare-applications",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-2-healthcare-applications.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
+    "permalink": "/docs/applications/chapter-1-industrial-applications"
+  },
+  "next": {
+    "title": "Chapter 3: Domestic Applications of Physical AI and Humanoid Robotics",
+    "permalink": "/docs/applications/chapter-3-domestic-applications"
+  }
+}

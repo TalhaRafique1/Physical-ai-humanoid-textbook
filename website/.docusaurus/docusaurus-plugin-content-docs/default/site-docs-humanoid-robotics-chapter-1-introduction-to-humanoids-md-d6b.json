@@ -1,0 +1,27 @@
+{
+  "id": "humanoid-robotics/chapter-1-introduction-to-humanoids",
+  "title": "Chapter 1: Introduction to Humanoid Robotics",
+  "description": "Learning Objectives",
+  "source": "@site/docs/humanoid-robotics/chapter-1-introduction-to-humanoids.md",
+  "sourceDirName": "humanoid-robotics",
+  "slug": "/humanoid-robotics/chapter-1-introduction-to-humanoids",
+  "permalink": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-1-introduction-to-humanoids.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 6: Embodiment and Cognition in Physical AI",
+    "permalink": "/docs/physical-ai/chapter-6-embodiment-and-cognition"
+  },
+  "next": {
+    "title": "Chapter 2: Bipedal Locomotion in Humanoid Robots",
+    "permalink": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion"
+  }
+}

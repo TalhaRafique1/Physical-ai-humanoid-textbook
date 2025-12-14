@@ -1,0 +1,27 @@
+{
+  "id": "humanoid-robotics/chapter-3-humanoid-manipulation",
+  "title": "Chapter 3: Humanoid Manipulation and Dexterity",
+  "description": "Learning Objectives",
+  "source": "@site/docs/humanoid-robotics/chapter-3-humanoid-manipulation.md",
+  "sourceDirName": "humanoid-robotics",
+  "slug": "/humanoid-robotics/chapter-3-humanoid-manipulation",
+  "permalink": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-3-humanoid-manipulation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Bipedal Locomotion in Humanoid Robots",
+    "permalink": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion"
+  },
+  "next": {
+    "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
+    "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence"
+  }
+}

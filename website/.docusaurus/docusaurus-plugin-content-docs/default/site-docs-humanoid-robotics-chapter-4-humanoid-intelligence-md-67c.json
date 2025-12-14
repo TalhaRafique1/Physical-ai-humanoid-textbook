@@ -1,0 +1,27 @@
+{
+  "id": "humanoid-robotics/chapter-4-humanoid-intelligence",
+  "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
+  "description": "Learning Objectives",
+  "source": "@site/docs/humanoid-robotics/chapter-4-humanoid-intelligence.md",
+  "sourceDirName": "humanoid-robotics",
+  "slug": "/humanoid-robotics/chapter-4-humanoid-intelligence",
+  "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-4-humanoid-intelligence.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 3: Humanoid Manipulation and Dexterity",
+    "permalink": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation"
+  },
+  "next": {
+    "title": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
+    "permalink": "/docs/applications/chapter-1-industrial-applications"
+  }
+}

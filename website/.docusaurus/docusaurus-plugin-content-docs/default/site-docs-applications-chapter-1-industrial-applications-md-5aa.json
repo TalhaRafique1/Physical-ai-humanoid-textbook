@@ -1,0 +1,27 @@
+{
+  "id": "applications/chapter-1-industrial-applications",
+  "title": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
+  "description": "Learning Objectives",
+  "source": "@site/docs/applications/chapter-1-industrial-applications.md",
+  "sourceDirName": "applications",
+  "slug": "/applications/chapter-1-industrial-applications",
+  "permalink": "/docs/applications/chapter-1-industrial-applications",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-1-industrial-applications.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
+    "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence"
+  },
+  "next": {
+    "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
+    "permalink": "/docs/applications/chapter-2-healthcare-applications"
+  }
+}

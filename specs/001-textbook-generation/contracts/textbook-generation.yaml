@@ -1,0 +1,440 @@
+openapi: 3.0.0
+info:
+  title: Textbook Generation API
+  description: API for generating textbooks with AI
+  version: 1.0.0
+servers:
+  - url: https://api.example.com/v1
+    description: Production server
+
+paths:
+  /textbook-generation:
+    post:
+      summary: Start a new textbook generation process
+      description: Initiates the generation of a new textbook based on provided parameters
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerationRequest'
+      responses:
+        '201':
+          description: Generation process started successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerationResponse'
+        '400':
+          description: Invalid generation parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '422':
+          description: Unprocessable entity - parameters don't meet requirements
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+        - Textbook Generation
+
+  /textbook-generation/{generationId}:
+    get:
+      summary: Get generation status and details
+      description: Retrieves the current status and details of a textbook generation process
+      parameters:
+        - name: generationId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the generation process
+      responses:
+        '200':
+          description: Generation details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenerationDetails'
+        '404':
+          description: Generation process not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+        - Textbook Generation
+
+  /textbook-generation/{generationId}/progress:
+    get:
+      summary: Get generation progress
+      description: Retrieves the current progress of a textbook generation process
+      parameters:
+        - name: generationId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the generation process
+      responses:
+        '200':
+          description: Progress information retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProgressResponse'
+        '404':
+          description: Generation process not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+        - Textbook Generation
+
+  /textbook-generation/{generationId}/preview:
+    get:
+      summary: Get textbook preview
+      description: Retrieves a preview of the generated textbook content
+      parameters:
+        - name: generationId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique identifier for the generation process
+      responses:
+        '200':
+          description: Preview content retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PreviewResponse'
+        '404':
+          description: Generation process not found
+        '409':
+          description: Preview not available yet (generation not complete)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+      tags:
+        - Textbook Generation
+
+  /export:
+    post:
+      summary: Export textbook in specified format
+      description: Exports a completed textbook in the requested format
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExportRequest'
+      responses:
+        '200':
+          description: Export completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExportResponse'
+        '400':
+          description: Invalid export parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Textbook not found
+        '409':
+          description: Textbook not ready for export (not completed)
+      tags:
+        - Export
+
+components:
+  schemas:
+    GenerationRequest:
+      type: object
+      required:
+        - topic
+        - target_audience
+        - num_chapters
+      properties:
+        topic:
+          type: string
+          description: Main topic or subject area for the textbook
+          example: "Introduction to Machine Learning"
+        target_audience:
+          type: string
+          description: Intended audience level
+          enum: [high_school, undergraduate, graduate, professional]
+          example: "undergraduate"
+        num_chapters:
+          type: integer
+          description: Desired number of chapters
+          minimum: 1
+          maximum: 100
+          example: 8
+        content_depth:
+          type: string
+          description: Depth level preference
+          enum: [shallow, medium, deep]
+          default: "medium"
+          example: "medium"
+        writing_style:
+          type: string
+          description: Writing style preference
+          enum: [formal, conversational, technical]
+          default: "formal"
+          example: "formal"
+        sections_per_chapter:
+          type: integer
+          description: Desired number of sections per chapter
+          minimum: 1
+          maximum: 20
+          default: 3
+          example: 4
+        include_examples:
+          type: boolean
+          description: Whether to include examples
+          default: true
+          example: true
+        include_exercises:
+          type: boolean
+          description: Whether to include exercises
+          default: false
+          example: false
+        custom_instructions:
+          type: string
+          description: Any special instructions for generation
+          example: "Focus on practical applications and include real-world examples"
+
+    GenerationResponse:
+      type: object
+      required:
+        - generation_id
+        - status
+        - created_at
+      properties:
+        generation_id:
+          type: string
+          description: Unique identifier for the generation process
+          example: "gen_1234567890"
+        status:
+          type: string
+          description: Current status of the generation
+          enum: [draft, generating, completed, failed]
+          example: "generating"
+        created_at:
+          type: string
+          format: date-time
+          description: Timestamp when the generation was created
+          example: "2023-10-20T10:00:00Z"
+        estimated_completion:
+          type: string
+          format: date-time
+          description: Estimated time of completion
+          example: "2023-10-20T10:05:00Z"
+
+    GenerationDetails:
+      type: object
+      required:
+        - generation_id
+        - status
+        - textbook_info
+      properties:
+        generation_id:
+          type: string
+          description: Unique identifier for the generation process
+          example: "gen_1234567890"
+        status:
+          type: string
+          description: Current status of the generation
+          enum: [draft, generating, completed, failed]
+          example: "completed"
+        textbook_info:
+          $ref: '#/components/schemas/TextbookInfo'
+        progress:
+          $ref: '#/components/schemas/ProgressResponse'
+
+    TextbookInfo:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the textbook
+          example: "Introduction to Machine Learning"
+        description:
+          type: string
+          description: Brief description of the textbook content
+          example: "A comprehensive introduction to machine learning concepts and applications"
+        total_chapters:
+          type: integer
+          description: Number of chapters in the textbook
+          example: 8
+        target_audience:
+          type: string
+          description: Intended audience level
+          example: "undergraduate"
+        estimated_pages:
+          type: integer
+          description: Estimated number of pages
+          example: 240
+
+    ProgressResponse:
+      type: object
+      required:
+        - generation_id
+        - status
+        - progress_percentage
+      properties:
+        generation_id:
+          type: string
+          description: Unique identifier for the generation process
+          example: "gen_1234567890"
+        status:
+          type: string
+          description: Current status of the generation
+          enum: [draft, generating, completed, failed]
+          example: "generating"
+        progress_percentage:
+          type: number
+          format: float
+          description: Progress as percentage (0-100)
+          minimum: 0
+          maximum: 100
+          example: 65.5
+        current_chapter:
+          type: integer
+          description: Current chapter being processed
+          example: 5
+        total_chapters:
+          type: integer
+          description: Total number of chapters to generate
+          example: 8
+        estimated_time_remaining:
+          type: string
+          description: Estimated time remaining in human-readable format
+          example: "2 minutes"
+
+    PreviewResponse:
+      type: object
+      required:
+        - generation_id
+        - content
+      properties:
+        generation_id:
+          type: string
+          description: Unique identifier for the generation process
+          example: "gen_1234567890"
+        content:
+          type: string
+          description: Preview content of the textbook
+          example: "# Chapter 1: Introduction\n\nMachine learning is a subset of artificial intelligence..."
+        chapters_preview:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChapterPreview'
+        total_chapters:
+          type: integer
+          description: Total number of chapters in the textbook
+          example: 8
+
+    ChapterPreview:
+      type: object
+      properties:
+        chapter_number:
+          type: integer
+          description: Sequential number of the chapter
+          example: 1
+        title:
+          type: string
+          description: Title of the chapter
+          example: "Introduction to Machine Learning"
+        word_count:
+          type: integer
+          description: Number of words in the chapter
+          example: 3200
+        preview_content:
+          type: string
+          description: Preview content of the chapter
+          example: "Machine learning is a subset of artificial intelligence..."
+
+    ExportRequest:
+      type: object
+      required:
+        - generation_id
+        - format
+      properties:
+        generation_id:
+          type: string
+          description: Unique identifier for the generation process
+          example: "gen_1234567890"
+        format:
+          type: string
+          description: Desired export format
+          enum: [pdf, docx, epub]
+          example: "pdf"
+        options:
+          type: object
+          description: Format-specific options
+          properties:
+            include_toc:
+              type: boolean
+              description: Include table of contents
+              default: true
+            include_index:
+              type: boolean
+              description: Include index
+              default: false
+            page_size:
+              type: string
+              description: Page size for PDF export
+              enum: [A4, Letter]
+              default: "A4"
+
+    ExportResponse:
+      type: object
+      required:
+        - download_url
+        - format
+        - file_size
+      properties:
+        download_url:
+          type: string
+          description: URL to download the exported file
+          example: "https://api.example.com/v1/download/export_1234567890.pdf"
+        format:
+          type: string
+          description: Export format
+          example: "pdf"
+        file_size:
+          type: integer
+          description: Size of the exported file in bytes
+          example: 2457600
+        expires_at:
+          type: string
+          format: date-time
+          description: Time when the download link expires
+          example: "2023-10-20T12:00:00Z"
+
+    ErrorResponse:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          description: Error code
+          example: "INVALID_PARAMETERS"
+        message:
+          type: string
+          description: Human-readable error message
+          example: "Number of chapters must be between 1 and 100"
+        details:
+          type: object
+          description: Additional error details
+          example: {"num_chapters": "Must be between 1 and 100"}

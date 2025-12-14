@@ -1,0 +1,27 @@
+{
+  "id": "applications/chapter-3-domestic-applications",
+  "title": "Chapter 3: Domestic Applications of Physical AI and Humanoid Robotics",
+  "description": "Learning Objectives",
+  "source": "@site/docs/applications/chapter-3-domestic-applications.md",
+  "sourceDirName": "applications",
+  "slug": "/applications/chapter-3-domestic-applications",
+  "permalink": "/docs/applications/chapter-3-domestic-applications",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-3-domestic-applications.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
+    "permalink": "/docs/applications/chapter-2-healthcare-applications"
+  },
+  "next": {
+    "title": "Chapter 1: Technological Advances in Physical AI and Humanoid Robotics",
+    "permalink": "/docs/future-perspectives/chapter-1-technological-advances"
+  }
+}

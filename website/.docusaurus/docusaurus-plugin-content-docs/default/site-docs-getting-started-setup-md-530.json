@@ -1,0 +1,27 @@
+{
+  "id": "getting-started/setup",
+  "title": "Setup and Installation",
+  "description": "Learning Objectives",
+  "source": "@site/docs/getting-started/setup.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/setup",
+  "permalink": "/docs/getting-started/setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/getting-started/setup.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting Started with Physical AI",
+    "permalink": "/docs/getting-started/introduction"
+  },
+  "next": {
+    "title": "Chapter 1: Introduction to Physical AI",
+    "permalink": "/docs/physical-ai/chapter-1-introduction"
+  }
+}

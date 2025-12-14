@@ -1,0 +1,23 @@
+{
+  "id": "summary",
+  "title": "Summary and Next Steps",
+  "description": "Course Completion",
+  "source": "@site/docs/summary.md",
+  "sourceDirName": ".",
+  "slug": "/summary",
+  "permalink": "/docs/summary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/summary.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 100,
+  "frontMatter": {
+    "sidebar_position": 100
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 2: Societal Implications of Physical AI and Humanoid Robotics",
+    "permalink": "/docs/future-perspectives/chapter-2-societal-implications"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "physical-ai/chapter-6-embodiment-and-cognition",
+  "title": "Chapter 6: Embodiment and Cognition in Physical AI",
+  "description": "Learning Objectives",
+  "source": "@site/docs/physical-ai/chapter-6-embodiment-and-cognition.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/chapter-6-embodiment-and-cognition",
+  "permalink": "/docs/physical-ai/chapter-6-embodiment-and-cognition",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-6-embodiment-and-cognition.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 5: Human-Robot Interaction in Physical AI",
+    "permalink": "/docs/physical-ai/chapter-5-human-robot-interaction"
+  },
+  "next": {
+    "title": "Chapter 1: Introduction to Humanoid Robotics",
+    "permalink": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids"
+  }
+}

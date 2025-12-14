@@ -1,0 +1,141 @@
+{
+  "/__docusaurus/debug-304": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    }
+  },
+  "/__docusaurus/debug/config-9de": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    }
+  },
+  "/__docusaurus/debug/content-d40": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-3d8": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    }
+  },
+  "/__docusaurus/debug/metadata-4c2": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    }
+  },
+  "/__docusaurus/debug/registry-e6b": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    }
+  },
+  "/__docusaurus/debug/routes-72f": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-42-781"
+    }
+  },
+  "/docs-344": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docs-6-e-1-f05"
+    }
+  },
+  "/docs-b4a": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "version": "version---docs-935-398"
+  },
+  "/docs-c53": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/applications/chapter-1-industrial-applications-a7d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-applications-chapter-1-industrial-applications-5-aa-f75"
+  },
+  "/docs/applications/chapter-2-healthcare-applications-88f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-applications-chapter-2-healthcare-applications-1-e-7-a5e"
+  },
+  "/docs/applications/chapter-3-domestic-applications-5c7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-applications-chapter-3-domestic-applicationscaa-d66"
+  },
+  "/docs/future-perspectives/chapter-1-technological-advances-317": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-future-perspectives-chapter-1-technological-advancesa-58-9fa"
+  },
+  "/docs/future-perspectives/chapter-2-societal-implications-f9a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-future-perspectives-chapter-2-societal-implicationsc-3-a-12e"
+  },
+  "/docs/getting-started/introduction-d6c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-introduction-9-ff-6b9"
+  },
+  "/docs/getting-started/setup-754": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-setup-530-9f3"
+  },
+  "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids-1c0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-humanoid-robotics-chapter-1-introduction-to-humanoidsd-6-b-449"
+  },
+  "/docs/humanoid-robotics/chapter-2-bipedal-locomotion-77d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-humanoid-robotics-chapter-2-bipedal-locomotion-90-b-cb8"
+  },
+  "/docs/humanoid-robotics/chapter-3-humanoid-manipulation-2c1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-humanoid-robotics-chapter-3-humanoid-manipulationb-34-bf7"
+  },
+  "/docs/humanoid-robotics/chapter-4-humanoid-intelligence-ed8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-humanoid-robotics-chapter-4-humanoid-intelligence-67-c-edd"
+  },
+  "/docs/intro-aed": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/physical-ai/chapter-1-introduction-2c6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-physical-ai-chapter-1-introduction-0-ea-4f1"
+  },
+  "/docs/physical-ai/chapter-2-sensing-and-perception-0a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-physical-ai-chapter-2-sensing-and-perception-7-b-8-0fa"
+  },
+  "/docs/physical-ai/chapter-3-motion-and-control-f1f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-physical-ai-chapter-3-motion-and-controlfac-e0f"
+  },
+  "/docs/physical-ai/chapter-4-learning-and-adaptation-dca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-physical-ai-chapter-4-learning-and-adaptation-5-e-3-bf1"
+  },
+  "/docs/physical-ai/chapter-5-human-robot-interaction-443": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-physical-ai-chapter-5-human-robot-interactionaeb-49f"
+  },
+  "/docs/physical-ai/chapter-6-embodiment-and-cognition-793": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-physical-ai-chapter-6-embodiment-and-cognitione-47-ff8"
+  },
+  "/docs/summary-07e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-summary-0-bc-a4d"
+  },
+  "/-c36": {
+    "__comp": "__comp---site-src-pages-index-jsx-9-dd-cb1",
+    "__context": {
+      "plugin": "plugin---896-12f"
+    },
+    "config": "config---5-e-9-4f3"
+  }
+}
