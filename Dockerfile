@@ -25,34 +25,37 @@ EXPOSE 8000
 CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
-# Frontend stage (build)
-FROM node:18 as frontend-build
+# Docusaurus Frontend stage (build)
+FROM node:18 as docusaurus-build
 
-WORKDIR /app/frontend
+WORKDIR /app/website
 
 # Copy package files
-COPY frontend/package*.json ./
+COPY website/package*.json ./
 
 # Install dependencies
 RUN npm ci
 
 # Copy source code
-COPY frontend/src ./src
-COPY frontend/public ./public
-COPY frontend/tsconfig.json .
+COPY website/src ./src
+COPY website/docs ./docs
+COPY website/static ./static
+COPY website/docusaurus.config.js ./
+COPY website/sidebars.js ./
+COPY website/tsconfig.json ./
 
-# Build the frontend
+# Build the Docusaurus site
 RUN npm run build
 
 
-# Frontend stage (serve)
+# Docusaurus Frontend stage (serve)
 FROM nginx:alpine as frontend
 
-# Copy built frontend to nginx
-COPY --from=frontend-build /app/frontend/build /usr/share/nginx/html
+# Copy built Docusaurus site to nginx
+COPY --from=docusaurus-build /app/website/build /usr/share/nginx/html
 
 # Copy custom nginx configuration
-COPY frontend/nginx.conf /etc/nginx/nginx.conf
+COPY website/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 

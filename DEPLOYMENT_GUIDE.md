@@ -14,9 +14,37 @@ Your application consists of two main components:
 - Backend hosting account (Railway, Heroku, Render, etc.)
 - Frontend hosting account (Vercel, Netlify, GitHub Pages, etc.)
 
-## Step 1: Deploy the Backend API
+## Option 1: Deploy with Docker Compose (Recommended for consistency)
 
-### Option A: Deploy to Railway (Recommended)
+This approach deploys both frontend and backend together using Docker Compose:
+
+1. **Ensure Docker setup is correct**
+   - The Dockerfile should be configured to build the Docusaurus site from the `website` directory
+   - The nginx configuration should proxy API requests to the backend
+
+2. **Deploy with Docker Compose**
+   ```bash
+   # From the root directory of your project
+   docker-compose up -d
+   ```
+
+3. **Access your application**
+   - Frontend will be available at http://localhost:80
+   - Backend API will be available at http://localhost:8000
+   - The chatbot will work seamlessly as API requests are proxied to the backend
+
+4. **Deploy to cloud platforms supporting Docker**
+   - AWS ECS
+   - Google Cloud Run
+   - Azure Container Instances
+   - Railway (supports Docker)
+   - Render (supports Docker)
+
+## Option 2: Separate Deployment (Recommended for scalability)
+
+### Step 1: Deploy the Backend API
+
+#### Option A: Deploy to Railway (Recommended)
 
 1. **Sign up for Railway**
    - Go to https://railway.app
@@ -43,7 +71,7 @@ Your application consists of two main components:
    - After deployment, Railway will provide a URL like `https://your-app-name.up.railway.app`
    - Note this URL as you'll need it for frontend configuration
 
-### Option B: Deploy to Render
+#### Option B: Deploy to Render
 
 1. **Sign up for Render**
    - Go to https://render.com
@@ -60,7 +88,7 @@ Your application consists of two main components:
    - After deployment, Render will provide a URL
    - Note this URL as you'll need it for frontend configuration
 
-## Step 2: Configure Frontend for Production
+### Step 2: Configure Frontend for Production
 
 Before deploying the frontend, you need to update the ChatWidget to point to your production backend:
 
@@ -134,9 +162,9 @@ Before deploying the frontend, you need to update the ChatWidget to point to you
    REACT_APP_API_URL=https://your-backend-url.railway.app
    ```
 
-## Step 3: Deploy the Frontend
+### Step 3: Deploy the Frontend
 
-### Option A: Deploy to Vercel (Recommended)
+#### Option A: Deploy to Vercel (Recommended)
 
 1. **Sign up for Vercel**
    - Go to https://vercel.com
@@ -155,7 +183,7 @@ Before deploying the frontend, you need to update the ChatWidget to point to you
    - Go to your project settings
    - Add environment variable: `REACT_APP_API_URL` with your backend URL
 
-### Option B: Deploy to Netlify
+#### Option B: Deploy to Netlify
 
 1. **Sign up for Netlify**
    - Go to https://netlify.com
@@ -172,7 +200,7 @@ Before deploying the frontend, you need to update the ChatWidget to point to you
    - Go to "Build & deploy" → "Environment"
    - Add variable: `REACT_APP_API_URL` with your backend URL
 
-### Option C: Deploy to GitHub Pages
+#### Option C: Deploy to GitHub Pages
 
 1. **Update docusaurus.config.js**
    ```js
