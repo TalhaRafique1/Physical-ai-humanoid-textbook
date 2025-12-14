@@ -246,18 +246,24 @@ Both Vercel and Netlify allow you to add custom domains:
 2. **API not responding**: Verify that your backend URL is correct in the frontend
 3. **Build failures**: Check that all dependencies are properly listed in package.json
 
-### Railway-Specific Issues:
+### Vercel-Specific Issues:
 
-1. **Docker build failures on Railway**:
+1. **Permission denied error during build**:
+   - This is a common issue with Docusaurus on Vercel
+   - Solution: Updated package.json to use direct Node.js build command instead of docusaurus binary
+   - Make sure to commit the updated package.json and redeploy
+   - In Vercel dashboard, trigger a "Clear cache and redeploy" for the deployment
+
+2. **Docker build failures on Railway**:
    - Make sure your Dockerfile references the correct directories (`website` instead of `frontend`)
    - In the Railway dashboard, go to your project → Build → "Rebuild without cache" to force a fresh build
    - Ensure all required files (like `website/nginx.conf`) exist in your repository
 
-2. **Port configuration**:
+3. **Port configuration**:
    - Make sure your application listens on the port specified by the `PORT` environment variable in Railway
    - The backend should use the `$PORT` environment variable instead of a fixed port
 
-3. **Environment variables**:
+4. **Environment variables**:
    - Set DATABASE_URL, DEBUG, and other required environment variables in the Railway dashboard
    - For the frontend, if deploying separately, ensure REACT_APP_API_URL points to your Railway backend URL
 
