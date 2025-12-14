@@ -61,6 +61,7 @@ const config = {
   ],
 
   plugins: [
+    './src/plugins/webpackProxyPlugin.js',
   ],
 
   themeConfig:

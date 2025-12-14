@@ -40,7 +40,9 @@ export default {
       }
     ]
   ],
-  "plugins": [],
+  "plugins": [
+    "./src/plugins/webpackProxyPlugin.js"
+  ],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {

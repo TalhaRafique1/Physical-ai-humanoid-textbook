@@ -46,33 +46,35 @@ const ChatWidget = () => {
     setError(null);
 
     try {
-      // In a real implementation, this would call the backend RAG API
-      // For now, we'll simulate a response based on the input
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
+      // Call the backend RAG API
+      // Using relative path that will be proxied during development
+      const response = await fetch('/api/rag/query', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          textbook_id: 'main-textbook', // Use a default textbook ID
+          question: inputValue
+        })
+      });
 
-      // Generate a response based on the user's input
-      let responseText = "I'm an AI assistant trained on this textbook. ";
-
-      if (inputValue.toLowerCase().includes('physical ai')) {
-        responseText += "Physical AI refers to artificial intelligence systems that interact with and operate in the physical world, integrating sensing, computation, and actuation. Unlike traditional AI that operates in digital environments, Physical AI must deal with real-time constraints, uncertainty, and safety considerations.";
-      } else if (inputValue.toLowerCase().includes('humanoid') || inputValue.toLowerCase().includes('robot')) {
-        responseText += "Humanoid robots are designed with human-like characteristics to facilitate interaction with humans. They face unique challenges like bipedal locomotion and safe human-robot interaction, but offer benefits in terms of natural communication and environment compatibility.";
-      } else if (inputValue.toLowerCase().includes('chapter') || inputValue.toLowerCase().includes('content')) {
-        responseText += "This textbook covers Physical AI and Humanoid Robotics in 6-8 chapters. The content includes fundamentals of Physical AI, robotics basics, motion planning, humanoid design, applications, and future perspectives.";
-      } else {
-        responseText += "Based on the textbook content, Physical AI represents a paradigm shift where computational intelligence is tightly integrated with physical systems. It differs from traditional AI by operating in real-time, dealing with uncertainty, and having physical consequences for its actions.";
+      if (!response.ok) {
+        throw new Error(`API request failed with status ${response.status}`);
       }
+
+      const data = await response.json();
 
       const botMessage = {
         id: Date.now() + 1,
-        text: responseText,
+        text: data.answer,
         sender: 'bot',
         timestamp: new Date()
       };
 
       setMessages(prev => [...prev, botMessage]);
     } catch (err) {
-      setError('Sorry, I encountered an error processing your question. Please try again.');
+      console.error('Error calling chatbot API:', err);
       const errorMessage = {
         id: Date.now() + 1,
         text: 'Sorry, I encountered an error processing your question. Please try again.',
