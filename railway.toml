@@ -1,16 +1,10 @@
 # Railway configuration for textbook app
 
 [build]
-builder = "nixpacks"
-
-[build.args]
-NIXPACKS_NODE_VERSION = "18"
-NIXPACKS_PYTHON_VERSION = "3.11"
-
-[deploy]
-startCommand = "cd backend && uvicorn src.api.main:app --host 0.0.0.0 --port $PORT"
+builder = "docker"
+dockerfilePath = "Dockerfile.railway"
 
 [variables]
-PORT = 8000
+PORT = 3000
 DATABASE_URL = "postgresql+asyncpg://textbook_user:textbook_password@db:5432/textbook_generation"
 DEBUG = true

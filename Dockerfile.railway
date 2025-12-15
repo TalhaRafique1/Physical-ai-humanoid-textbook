@@ -1,0 +1,36 @@
+# Railway-specific Dockerfile for textbook generation system frontend
+
+FROM node:18 as docusaurus-build
+
+WORKDIR /app/website
+
+# Copy package files
+COPY ./website/package*.json ./
+RUN npm ci
+
+# Copy source code
+COPY ./website/src ./src
+COPY ./website/docs ./docs
+COPY ./website/static ./static
+COPY ./website/docusaurus.config.js ./
+COPY ./website/sidebars.js ./
+COPY ./website/tsconfig.json ./
+
+# Build the Docusaurus site
+RUN npm run build
+
+# Production stage - serve with a simple server that can use PORT
+FROM node:18-alpine
+
+WORKDIR /app/website
+
+# Copy the built site
+COPY --from=docusaurus-build /app/website/build ./build
+
+# Install a simple static server that can use PORT
+RUN npm install -g serve
+
+EXPOSE 3000
+
+# Serve the built site on the PORT environment variable
+CMD ["sh", "-c", "serve -s build -l ${PORT:-3000}"]
