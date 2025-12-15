@@ -67,12 +67,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/book-logo.png',
       navbar: {
         title: 'AI Textbook',
         logo: {
           alt: 'AI Textbook Logo',
-          src: 'img/logo.svg',
+          src: 'img/book-logo.png',
         },
         items: [
           {
