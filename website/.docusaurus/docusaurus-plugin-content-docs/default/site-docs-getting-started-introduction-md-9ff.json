@@ -5,7 +5,7 @@
   "source": "@site/docs/getting-started/introduction.md",
   "sourceDirName": "getting-started",
   "slug": "/getting-started/introduction",
-  "permalink": "/docs/getting-started/introduction",
+  "permalink": "/ur/docs/getting-started/introduction",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/getting-started/introduction.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Introduction to Physical AI & Humanoid Robotics",
-    "permalink": "/docs/intro"
+    "permalink": "/ur/docs/intro"
   },
   "next": {
     "title": "Setup and Installation",
-    "permalink": "/docs/getting-started/setup"
+    "permalink": "/ur/docs/getting-started/setup"
   }
 }

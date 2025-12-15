@@ -12,7 +12,7 @@
       {
         "type": "link",
         "label": "Introduction to Physical AI & Humanoid Robotics",
-        "href": "/docs/intro",
+        "href": "/ur/docs/intro",
         "docId": "intro",
         "unlisted": false
       },
@@ -23,14 +23,14 @@
           {
             "type": "link",
             "label": "Getting Started with Physical AI",
-            "href": "/docs/getting-started/introduction",
+            "href": "/ur/docs/getting-started/introduction",
             "docId": "getting-started/introduction",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Setup and Installation",
-            "href": "/docs/getting-started/setup",
+            "href": "/ur/docs/getting-started/setup",
             "docId": "getting-started/setup",
             "unlisted": false
           }
@@ -45,42 +45,42 @@
           {
             "type": "link",
             "label": "Chapter 1: Introduction to Physical AI",
-            "href": "/docs/physical-ai/chapter-1-introduction",
+            "href": "/ur/docs/physical-ai/chapter-1-introduction",
             "docId": "physical-ai/chapter-1-introduction",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 2: Sensing and Perception in Physical AI",
-            "href": "/docs/physical-ai/chapter-2-sensing-and-perception",
+            "href": "/ur/docs/physical-ai/chapter-2-sensing-and-perception",
             "docId": "physical-ai/chapter-2-sensing-and-perception",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 3: Motion and Control in Physical AI",
-            "href": "/docs/physical-ai/chapter-3-motion-and-control",
+            "href": "/ur/docs/physical-ai/chapter-3-motion-and-control",
             "docId": "physical-ai/chapter-3-motion-and-control",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 4: Learning and Adaptation in Physical AI",
-            "href": "/docs/physical-ai/chapter-4-learning-and-adaptation",
+            "href": "/ur/docs/physical-ai/chapter-4-learning-and-adaptation",
             "docId": "physical-ai/chapter-4-learning-and-adaptation",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 5: Human-Robot Interaction in Physical AI",
-            "href": "/docs/physical-ai/chapter-5-human-robot-interaction",
+            "href": "/ur/docs/physical-ai/chapter-5-human-robot-interaction",
             "docId": "physical-ai/chapter-5-human-robot-interaction",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 6: Embodiment and Cognition in Physical AI",
-            "href": "/docs/physical-ai/chapter-6-embodiment-and-cognition",
+            "href": "/ur/docs/physical-ai/chapter-6-embodiment-and-cognition",
             "docId": "physical-ai/chapter-6-embodiment-and-cognition",
             "unlisted": false
           }
@@ -95,28 +95,28 @@
           {
             "type": "link",
             "label": "Chapter 1: Introduction to Humanoid Robotics",
-            "href": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids",
+            "href": "/ur/docs/humanoid-robotics/chapter-1-introduction-to-humanoids",
             "docId": "humanoid-robotics/chapter-1-introduction-to-humanoids",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 2: Bipedal Locomotion in Humanoid Robots",
-            "href": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion",
+            "href": "/ur/docs/humanoid-robotics/chapter-2-bipedal-locomotion",
             "docId": "humanoid-robotics/chapter-2-bipedal-locomotion",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 3: Humanoid Manipulation and Dexterity",
-            "href": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation",
+            "href": "/ur/docs/humanoid-robotics/chapter-3-humanoid-manipulation",
             "docId": "humanoid-robotics/chapter-3-humanoid-manipulation",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
-            "href": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence",
+            "href": "/ur/docs/humanoid-robotics/chapter-4-humanoid-intelligence",
             "docId": "humanoid-robotics/chapter-4-humanoid-intelligence",
             "unlisted": false
           }
@@ -131,21 +131,21 @@
           {
             "type": "link",
             "label": "Chapter 1: Industrial Applications of Physical AI and Humanoid Robotics",
-            "href": "/docs/applications/chapter-1-industrial-applications",
+            "href": "/ur/docs/applications/chapter-1-industrial-applications",
             "docId": "applications/chapter-1-industrial-applications",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
-            "href": "/docs/applications/chapter-2-healthcare-applications",
+            "href": "/ur/docs/applications/chapter-2-healthcare-applications",
             "docId": "applications/chapter-2-healthcare-applications",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 3: Domestic Applications of Physical AI and Humanoid Robotics",
-            "href": "/docs/applications/chapter-3-domestic-applications",
+            "href": "/ur/docs/applications/chapter-3-domestic-applications",
             "docId": "applications/chapter-3-domestic-applications",
             "unlisted": false
           }
@@ -160,14 +160,14 @@
           {
             "type": "link",
             "label": "Chapter 1: Technological Advances in Physical AI and Humanoid Robotics",
-            "href": "/docs/future-perspectives/chapter-1-technological-advances",
+            "href": "/ur/docs/future-perspectives/chapter-1-technological-advances",
             "docId": "future-perspectives/chapter-1-technological-advances",
             "unlisted": false
           },
           {
             "type": "link",
             "label": "Chapter 2: Societal Implications of Physical AI and Humanoid Robotics",
-            "href": "/docs/future-perspectives/chapter-2-societal-implications",
+            "href": "/ur/docs/future-perspectives/chapter-2-societal-implications",
             "docId": "future-perspectives/chapter-2-societal-implications",
             "unlisted": false
           }
@@ -182,7 +182,7 @@
           {
             "type": "link",
             "label": "Summary and Next Steps",
-            "href": "/docs/summary",
+            "href": "/ur/docs/summary",
             "docId": "summary",
             "unlisted": false
           }

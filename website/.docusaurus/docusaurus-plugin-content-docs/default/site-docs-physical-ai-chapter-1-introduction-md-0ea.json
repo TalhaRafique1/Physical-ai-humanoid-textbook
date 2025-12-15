@@ -5,7 +5,7 @@
   "source": "@site/docs/physical-ai/chapter-1-introduction.md",
   "sourceDirName": "physical-ai",
   "slug": "/physical-ai/chapter-1-introduction",
-  "permalink": "/docs/physical-ai/chapter-1-introduction",
+  "permalink": "/ur/docs/physical-ai/chapter-1-introduction",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-1-introduction.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Setup and Installation",
-    "permalink": "/docs/getting-started/setup"
+    "permalink": "/ur/docs/getting-started/setup"
   },
   "next": {
     "title": "Chapter 2: Sensing and Perception in Physical AI",
-    "permalink": "/docs/physical-ai/chapter-2-sensing-and-perception"
+    "permalink": "/ur/docs/physical-ai/chapter-2-sensing-and-perception"
   }
 }

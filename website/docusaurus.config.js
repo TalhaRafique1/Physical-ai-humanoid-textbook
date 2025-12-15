@@ -104,15 +104,15 @@ const config = {
               },
               {
                 label: 'Getting Started',
-                to: '/docs/category/getting-started',
+                to: '/docs/getting-started/introduction',
               },
               {
                 label: 'Physical AI',
-                to: '/docs/category/physical-ai',
+                to: '/docs/physical-ai/chapter-1-introduction',
               },
               {
                 label: 'Humanoid Robotics',
-                to: '/docs/category/humanoid-robotics',
+                to: '/docs/humanoid-robotics/chapter-1-introduction-to-humanoids',
               },
             ],
           },
@@ -129,7 +129,7 @@ const config = {
               },
               {
                 label: 'Tutorials',
-                to: '/docs/category/getting-started',
+                to: '/docs/getting-started/introduction',
               },
               {
                 label: 'API Reference',
@@ -163,11 +163,11 @@ const config = {
             items: [
               {
                 label: 'Applications',
-                to: '/docs/category/applications',
+                to: '/docs/applications/chapter-1-industrial-applications',
               },
               {
                 label: 'Future Perspectives',
-                to: '/docs/category/future-perspectives',
+                to: '/docs/future-perspectives/chapter-1-technological-advances',
               },
               {
                 label: 'Contributing',
