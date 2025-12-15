@@ -46,13 +46,13 @@ const config = {
           editUrl:
             'https://github.com/ai-textbook-project/textbook/tree/main/website/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/ai-textbook-project/textbook/tree/main/website/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/ai-textbook-project/textbook/tree/main/website/',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -96,11 +96,44 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Textbook Sections',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Introduction',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Getting Started',
+                to: '/docs/category/getting-started',
+              },
+              {
+                label: 'Physical AI',
+                to: '/docs/category/physical-ai',
+              },
+              {
+                label: 'Humanoid Robotics',
+                to: '/docs/category/humanoid-robotics',
+              },
+            ],
+          },
+          {
+            title: 'Resources',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Research Papers',
+                href: 'https://scholar.google.com',
+              },
+              {
+                label: 'Tutorials',
+                to: '/docs/category/getting-started',
+              },
+              {
+                label: 'API Reference',
+                href: '#',
               },
             ],
           },
@@ -108,8 +141,8 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'GitHub',
+                href: 'https://github.com/ai-textbook-project/textbook',
               },
               {
                 label: 'Discord',
@@ -119,19 +152,35 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/docusaurus',
               },
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
+                label: 'Applications',
+                to: '/docs/category/applications',
+              },
+              {
+                label: 'Future Perspectives',
+                to: '/docs/category/future-perspectives',
+              },
+              {
+                label: 'Contributing',
+                href: 'https://github.com/ai-textbook-project/textbook/blob/main/CONTRIBUTING.md',
+              },
+              {
+                label: 'GitHub Repository',
                 href: 'https://github.com/ai-textbook-project/textbook',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} AI-Native Textbook Project. Built with Docusaurus.`,
+        copyright: `<div style="display: flex; flex-direction: column; align-items: center;"><span>Copyright © ${new Date().getFullYear()} AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</span><div style="margin-top: 10px;">Made with ❤️ for the AI community</div></div>`,
       },
       prism: {
         theme: prismThemes.github,
