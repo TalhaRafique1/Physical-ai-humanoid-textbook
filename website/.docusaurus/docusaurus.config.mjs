@@ -5,7 +5,7 @@
  */
 export default {
   "title": "AI-Native Textbook for Physical AI & Humanoid Robotics",
-  "tagline": "Interactive, intelligent textbook powered by AI",
+  "tagline": "Interactive, intelligent textbook powered by AI by Talha Rafique",
   "favicon": "img/favicon.ico",
   "url": "https://your-website-domain.com",
   "baseUrl": "/ur/",
@@ -154,7 +154,7 @@ export default {
           ]
         }
       ],
-      "copyright": "<div style=\"display: flex; flex-direction: column; align-items: center;\"><span>Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</span><div style=\"margin-top: 10px;\">Made with ❤️ for the AI community</div></div>"
+      "copyright": "<div style=\"display: flex; flex-direction: column; align-items: center;\"><span>Copyright © 2025 AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</span><div style=\"margin-top: 10px;\">Made with ❤️ for the AI community by Talha Rafique</div></div>"
     },
     "prism": {
       "theme": {

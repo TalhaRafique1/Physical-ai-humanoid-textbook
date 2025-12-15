@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'AI-Native Textbook for Physical AI & Humanoid Robotics',
-  tagline: 'Interactive, intelligent textbook powered by AI',
+  tagline: 'Interactive, intelligent textbook powered by AI by Talha Rafique',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -180,7 +180,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<div style="display: flex; flex-direction: column; align-items: center;"><span>Copyright © ${new Date().getFullYear()} AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</span><div style="margin-top: 10px;">Made with ❤️ for the AI community</div></div>`,
+        copyright: `<div style="display: flex; flex-direction: column; align-items: center;"><span>Copyright © ${new Date().getFullYear()} AI-Native Textbook for Physical AI & Humanoid Robotics. Built with Docusaurus.</span><div style="margin-top: 10px;">Made with ❤️ for the AI community by Talha Rafique</div></div>`,
       },
       prism: {
         theme: prismThemes.github,
