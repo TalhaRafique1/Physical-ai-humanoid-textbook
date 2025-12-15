@@ -1,8 +1,7 @@
 # Railway configuration for textbook app
 
 [build]
-builder = "docker"
-dockerfilePath = "Dockerfile.railway"
+dockerfile = "Dockerfile.railway"
 
 [variables]
 PORT = 3000
