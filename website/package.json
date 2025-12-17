@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "node -e \"require('@docusaurus/core/lib/commands/build').build(process.cwd(), {bundle: true}).catch(e => { console.error(e); process.exit(1); })\"",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

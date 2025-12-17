@@ -28,11 +28,16 @@ CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
 # Docusaurus Frontend stage (build)
 FROM node:18 as docusaurus-build
 
+# Increase memory limit for Node.js to prevent build timeouts
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
 WORKDIR /app/website
 
 # Copy package files
 COPY ./website/package*.json ./
-RUN npm ci
+
+# Install dependencies with production flag to reduce build time
+RUN npm ci --legacy-peer-deps --no-audit --no-fund
 
 # Copy source code
 COPY ./website/src ./src
