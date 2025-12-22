@@ -51,15 +51,15 @@ const ChatWidget = () => {
       const BACKEND_URL = process.env.REACT_APP_API_URL || '';
       const apiUrl = BACKEND_URL ? `${BACKEND_URL}/api/rag/query` : '/api/rag/query';
 
-      const response = await fetch(apiUrl, {
+      // Construct query parameters
+      const params = new URLSearchParams({
+        textbook_id: 'textbook_b476521c', // Use the actual textbook ID that was indexed
+        question: inputValue
+      });
+
+      const response = await fetch(`${apiUrl}?${params}`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          textbook_id: 'main-textbook', // Use a default textbook ID
-          question: inputValue
-        })
+        // No headers needed since we're not sending a body
       });
 
       if (!response.ok) {

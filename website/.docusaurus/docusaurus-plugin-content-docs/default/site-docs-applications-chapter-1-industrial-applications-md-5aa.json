@@ -5,7 +5,7 @@
   "source": "@site/docs/applications/chapter-1-industrial-applications.md",
   "sourceDirName": "applications",
   "slug": "/applications/chapter-1-industrial-applications",
-  "permalink": "/ur/docs/applications/chapter-1-industrial-applications",
+  "permalink": "/docs/applications/chapter-1-industrial-applications",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/applications/chapter-1-industrial-applications.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 4: Intelligence and Cognition in Humanoid Robots",
-    "permalink": "/ur/docs/humanoid-robotics/chapter-4-humanoid-intelligence"
+    "permalink": "/docs/humanoid-robotics/chapter-4-humanoid-intelligence"
   },
   "next": {
     "title": "Chapter 2: Healthcare Applications of Physical AI and Humanoid Robotics",
-    "permalink": "/ur/docs/applications/chapter-2-healthcare-applications"
+    "permalink": "/docs/applications/chapter-2-healthcare-applications"
   }
 }

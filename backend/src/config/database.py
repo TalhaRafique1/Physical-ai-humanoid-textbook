@@ -6,9 +6,19 @@ This module handles database connection configuration for Neon PostgreSQL.
 import os
 from typing import Optional
 from pydantic_settings import BaseSettings
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+
+# Try to import SQLAlchemy components, but provide fallbacks
+try:
+    from sqlalchemy import create_engine
+    from sqlalchemy.ext.declarative import declarative_base
+    from sqlalchemy.orm import sessionmaker
+    SQLALCHEMY_AVAILABLE = True
+except ImportError:
+    # Define placeholders to avoid NameError
+    create_engine = None
+    declarative_base = None
+    sessionmaker = None
+    SQLALCHEMY_AVAILABLE = False
 
 
 class DatabaseSettings(BaseSettings):
@@ -31,39 +41,55 @@ def get_database_url() -> str:
 
 
 # For sync operations (if needed)
-sync_engine = create_engine(
-    settings.database_url.replace("+asyncpg", ""),  # Use regular postgresql driver
-    echo=settings.debug,
-)
-
-# For async operations
-try:
-    from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
-
-    async_engine = create_async_engine(
-        settings.database_url,
+if SQLALCHEMY_AVAILABLE:
+    sync_engine = create_engine(
+        settings.database_url.replace("+asyncpg", ""),  # Use regular postgresql driver
         echo=settings.debug,
     )
+else:
+    sync_engine = None
 
-    async_session_local = sessionmaker(
-        async_engine, class_=AsyncSession, expire_on_commit=False
-    )
-except ImportError:
-    # If async drivers are not available, fall back to sync
+# For async operations
+if SQLALCHEMY_AVAILABLE:
+    try:
+        from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+
+        async_engine = create_async_engine(
+            settings.database_url,
+            echo=settings.debug,
+        )
+
+        async_session_local = sessionmaker(
+            async_engine, class_=AsyncSession, expire_on_commit=False
+        )
+    except ImportError:
+        # If async drivers are not available, fall back to sync
+        async_engine = None
+        async_session_local = None
+else:
+    # If SQLAlchemy is not available at all
     async_engine = None
     async_session_local = None
 
 
 def get_db_session():
     """Get a database session."""
-    if async_session_local:
+    if SQLALCHEMY_AVAILABLE and async_session_local:
         return async_session_local()
-    else:
+    elif SQLALCHEMY_AVAILABLE and sync_engine:
         # Fallback to sync session
         return sessionmaker(bind=sync_engine)()
+    else:
+        # Return None or raise an exception if DB is required
+        return None
 
 
-Base = declarative_base()
+if SQLALCHEMY_AVAILABLE:
+    Base = declarative_base()
+else:
+    # Fallback base class if SQLAlchemy is not available
+    class Base:
+        pass
 
 
 # Example usage:

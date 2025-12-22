@@ -10,9 +10,9 @@ from datetime import datetime
 import asyncio
 import re
 
-from ..models.textbook import Textbook
-from ..models.chapter import Chapter
-from ..models.section import Section
+from ...models.textbook import Textbook
+from ...models.chapter import Chapter
+from ...models.section import Section
 
 
 class TranslationService:

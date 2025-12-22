@@ -8,9 +8,9 @@ from typing import Dict, Any, Optional, List
 from datetime import datetime
 import asyncio
 
-from ..models.generation_params import GenerationParameters
-from ..models.textbook import Textbook
-from ..services.auth.auth_service import User
+from ...models.generation_params import GenerationParameters
+from ...models.textbook import Textbook
+from ...services.auth.auth_service import User
 
 
 class PersonalizationService:

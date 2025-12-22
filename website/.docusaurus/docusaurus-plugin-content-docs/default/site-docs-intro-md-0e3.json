@@ -5,7 +5,7 @@
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
-  "permalink": "/ur/docs/intro",
+  "permalink": "/docs/intro",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/intro.md",
@@ -18,6 +18,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Getting Started with Physical AI",
-    "permalink": "/ur/docs/getting-started/introduction"
+    "permalink": "/docs/getting-started/introduction"
   }
 }

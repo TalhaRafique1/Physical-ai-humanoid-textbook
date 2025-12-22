@@ -30,6 +30,8 @@ FROM node:18 as docusaurus-build
 
 # Increase memory limit for Node.js to prevent build timeouts
 ENV NODE_OPTIONS="--max-old-space-size=4096"
+# Set environment to handle File API issue
+ENV NODE_ENV=production
 
 WORKDIR /app/website
 
@@ -46,6 +48,9 @@ COPY ./website/static ./static
 COPY ./website/docusaurus.config.js ./
 COPY ./website/sidebars.js ./
 COPY ./website/tsconfig.json ./
+
+# Clear cache before build to avoid issues from previous builds
+RUN npx docusaurus clear
 
 # Build the Docusaurus site
 RUN npm run build

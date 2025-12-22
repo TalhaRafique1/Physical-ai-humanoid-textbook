@@ -15,5 +15,5 @@
     "types": ["node"]
   },
   "extends": "@docusaurus/tsconfig",
-  "include": ["src/**/*", "docs/**/*", "blog/**/*", ".docusaurus/**/*"]
+  "include": ["src/**/*", "docs/**/*"]
 }

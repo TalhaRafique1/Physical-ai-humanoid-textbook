@@ -9,16 +9,30 @@ import logging
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 import uuid
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Qdrant
-from langchain.chains import RetrievalQA
-from langchain.llms import OpenAI
-from langchain.prompts import PromptTemplate
-import qdrant_client
 
-from ..models.textbook import Textbook
-from ..services.validation_service import ValidationService
+# Try to import langchain components, but provide fallbacks
+try:
+    from langchain.text_splitter import RecursiveCharacterTextSplitter
+    from langchain.embeddings import HuggingFaceEmbeddings
+    from langchain.vectorstores import Qdrant
+    from langchain.chains import RetrievalQA
+    from langchain.llms import OpenAI
+    from langchain.prompts import PromptTemplate
+    import qdrant_client
+    LANGCHAIN_AVAILABLE = True
+except ImportError:
+    LANGCHAIN_AVAILABLE = False
+    # Define placeholders to avoid NameError
+    RecursiveCharacterTextSplitter = None
+    HuggingFaceEmbeddings = None
+    Qdrant = None
+    RetrievalQA = None
+    OpenAI = None
+    PromptTemplate = None
+    qdrant_client = None
+
+from ...models.textbook import Textbook
+from ...services.validation_service import ValidationService
 
 
 class RAGChatbotService:
@@ -31,29 +45,46 @@ class RAGChatbotService:
         self.logger = logging.getLogger(__name__)
         self.validation_service = ValidationService()
 
-        # Initialize embeddings model (using MiniLM as suggested in constitution)
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
-        )
+        # Initialize embeddings model only if langchain is available
+        if LANGCHAIN_AVAILABLE:
+            try:
+                # Initialize embeddings model (using MiniLM as suggested in constitution)
+                self.embeddings = HuggingFaceEmbeddings(
+                    model_name="sentence-transformers/all-MiniLM-L6-v2"
+                )
+            except:
+                self.embeddings = None
+                self.logger.warning("Embeddings not available, using fallback")
+        else:
+            self.embeddings = None
+            self.logger.warning("Langchain not available, using fallback implementation")
 
-        # Initialize Qdrant client (using local for now, can be configured for remote)
-        try:
-            self.qdrant_client = qdrant_client.QdrantClient(":memory:")  # In-memory for now
-        except:
-            # Fallback if qdrant_client is not available
+        # Initialize Qdrant client only if langchain is available
+        if LANGCHAIN_AVAILABLE:
+            try:
+                self.qdrant_client = qdrant_client.QdrantClient(":memory:")  # In-memory for now
+            except:
+                # Fallback if qdrant_client is not available
+                self.qdrant_client = None
+                self.logger.warning("Qdrant client not available, using in-memory fallback")
+        else:
             self.qdrant_client = None
-            self.logger.warning("Qdrant client not available, using in-memory fallback")
+            self.logger.warning("Langchain not available, using in-memory fallback")
 
         # Store textbook content for RAG
         self.textbook_store: Dict[str, Any] = {}
 
-        # Initialize the LLM (using OpenAI as default, can be swapped)
-        try:
-            self.llm = OpenAI(temperature=0.3, model_name="gpt-3.5-turbo-instruct")
-        except:
-            # Fallback if OpenAI is not available
+        # Initialize the LLM only if langchain is available
+        if LANGCHAIN_AVAILABLE:
+            try:
+                self.llm = OpenAI(temperature=0.3, model_name="gpt-3.5-turbo-instruct")
+            except:
+                # Fallback if OpenAI is not available
+                self.llm = None
+                self.logger.warning("OpenAI not available, using fallback response mechanism")
+        else:
             self.llm = None
-            self.logger.warning("OpenAI not available, using fallback response mechanism")
+            self.logger.warning("Langchain not available, using fallback response mechanism")
 
     async def index_textbook(self, textbook: Textbook) -> bool:
         """
@@ -71,13 +102,25 @@ class RAGChatbotService:
                 return False
 
             # Split the textbook content into chunks
-            text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=1000,
-                chunk_overlap=200,
-                length_function=len,
-            )
+            if LANGCHAIN_AVAILABLE and RecursiveCharacterTextSplitter:
+                text_splitter = RecursiveCharacterTextSplitter(
+                    chunk_size=1000,
+                    chunk_overlap=200,
+                    length_function=len,
+                )
+                chunks = text_splitter.split_text(textbook.generated_content)
+            else:
+                # Fallback: simple text splitting
+                import re
+                # Split content into chunks of approximately 1000 characters
+                text_content = textbook.generated_content
+                chunk_size = 1000
+                overlap = 200
+                chunks = []
 
-            chunks = text_splitter.split_text(textbook.generated_content)
+                for i in range(0, len(text_content), chunk_size - overlap):
+                    chunk = text_content[i:i + chunk_size]
+                    chunks.append(chunk)
 
             # Store the chunks with metadata
             self.textbook_store[textbook.id] = {

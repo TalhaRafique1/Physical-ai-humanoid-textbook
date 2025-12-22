@@ -5,7 +5,7 @@
   "source": "@site/docs/getting-started/setup.md",
   "sourceDirName": "getting-started",
   "slug": "/getting-started/setup",
-  "permalink": "/ur/docs/getting-started/setup",
+  "permalink": "/docs/getting-started/setup",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/getting-started/setup.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Getting Started with Physical AI",
-    "permalink": "/ur/docs/getting-started/introduction"
+    "permalink": "/docs/getting-started/introduction"
   },
   "next": {
     "title": "Chapter 1: Introduction to Physical AI",
-    "permalink": "/ur/docs/physical-ai/chapter-1-introduction"
+    "permalink": "/docs/physical-ai/chapter-1-introduction"
   }
 }

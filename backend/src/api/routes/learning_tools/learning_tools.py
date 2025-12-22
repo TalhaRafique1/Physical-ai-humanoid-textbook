@@ -4,14 +4,47 @@ Learning Tools API Routes
 This module defines the API endpoints for generating learning materials including
 summaries, quizzes, and learning boosters.
 """
-from fastapi import APIRouter, HTTPException, Depends
-from typing import Dict, Any, List
+from fastapi import APIRouter, HTTPException, Depends, Header
+from typing import Dict, Any, List, Optional
 from datetime import datetime
 import logging
 
-from ...services.learning_tools.learning_tools_service import LearningToolsService
-from ...services.auth.auth_service import User, get_current_user
-from ...models.textbook import Textbook
+from ....services.learning_tools.learning_tools_service import LearningToolsService
+from ....services.auth.auth_service import AuthService, User
+from ....models.textbook import Textbook
+
+# Create auth service instance to get current user
+auth_service = AuthService()
+
+async def get_current_user(authorization: str = Header(None)) -> Optional[User]:
+    """
+    Get the current authenticated user from the authorization header.
+
+    Args:
+        authorization: Authorization header containing the token
+
+    Returns:
+        User object if authenticated, None otherwise
+    """
+    if not authorization:
+        return None
+
+    try:
+        # Extract token from "Bearer <token>" format
+        if authorization.startswith("Bearer "):
+            token = authorization[7:]
+        else:
+            token = authorization
+
+        # Get user by token
+        user = await auth_service.get_user_by_token(token)
+        if not user:
+            raise HTTPException(status_code=401, detail="Invalid or expired token")
+
+        return user
+    except Exception as e:
+        logger.error(f"Error getting current user: {str(e)}")
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -233,7 +266,7 @@ async def generate_chapter_learning_materials(
         # In a full implementation, we would have access to individual chapters
 
         # Create a mock chapter for the purpose of this implementation
-        from ...models.chapter import Chapter
+        from ....models.chapter import Chapter
         mock_chapter = Chapter(
             id=f"mock_chapter_{chapter_number}",
             textbook_id=textbook_id,

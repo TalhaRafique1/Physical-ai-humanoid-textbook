@@ -5,7 +5,7 @@
   "source": "@site/docs/physical-ai/chapter-2-sensing-and-perception.md",
   "sourceDirName": "physical-ai",
   "slug": "/physical-ai/chapter-2-sensing-and-perception",
-  "permalink": "/ur/docs/physical-ai/chapter-2-sensing-and-perception",
+  "permalink": "/docs/physical-ai/chapter-2-sensing-and-perception",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/physical-ai/chapter-2-sensing-and-perception.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 1: Introduction to Physical AI",
-    "permalink": "/ur/docs/physical-ai/chapter-1-introduction"
+    "permalink": "/docs/physical-ai/chapter-1-introduction"
   },
   "next": {
     "title": "Chapter 3: Motion and Control in Physical AI",
-    "permalink": "/ur/docs/physical-ai/chapter-3-motion-and-control"
+    "permalink": "/docs/physical-ai/chapter-3-motion-and-control"
   }
 }

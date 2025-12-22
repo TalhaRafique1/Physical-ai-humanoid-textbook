@@ -8,7 +8,7 @@ export default {
   "tagline": "Interactive, intelligent textbook powered by AI by Talha Rafique",
   "favicon": "img/favicon.ico",
   "url": "https://your-website-domain.com",
-  "baseUrl": "/ur/",
+  "baseUrl": "/",
   "organizationName": "ai-textbook-project",
   "projectName": "textbook",
   "onBrokenLinks": "throw",
@@ -47,8 +47,8 @@ export default {
       },
       "items": [
         {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "type": "doc",
+          "docId": "intro",
           "position": "left",
           "label": "Textbook"
         },

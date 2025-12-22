@@ -8,8 +8,8 @@ from typing import Dict, Any, Optional
 import logging
 from datetime import datetime
 
-from ...services.auth.auth_service import AuthService, AuthCredentials, User
-from ...services.personalization.personalization_service import PersonalizationService
+from ....services.auth.auth_service import AuthService, AuthCredentials, User
+from ....services.personalization.personalization_service import PersonalizationService
 
 router = APIRouter()
 logger = logging.getLogger(__name__)

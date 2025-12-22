@@ -19,13 +19,20 @@ class ContentEnrichmentService:
 
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        self.session = aiohttp.ClientSession()
+        self._session = None
+
+    @property
+    async def session(self):
+        if self._session is None or self._session.closed:
+            self._session = aiohttp.ClientSession()
+        return self._session
 
     async def __aenter__(self):
         return self
 
     async def __aexit__(self, exc_type, exc_val, exc_tb):
-        await self.session.close()
+        if self._session:
+            await self._session.close()
 
     async def enrich_content(self,
                            topic: str,
@@ -88,7 +95,8 @@ class ContentEnrichmentService:
         search_url = f"https://en.wikipedia.org/api/rest_v1/page/summary/{quote(topic)}"
 
         try:
-            async with self.session.get(search_url) as response:
+            session = await self.session
+            async with session.get(search_url) as response:
                 if response.status == 200:
                     data = await response.json()
                     return [{
@@ -100,7 +108,7 @@ class ContentEnrichmentService:
                 else:
                     # If direct search fails, try search API
                     search_url = f"https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch={quote(topic)}&srlimit={max_results}"
-                    async with self.session.get(search_url) as search_response:
+                    async with session.get(search_url) as search_response:
                         if search_response.status == 200:
                             search_data = await search_response.json()
                             results = []
@@ -130,7 +138,8 @@ class ContentEnrichmentService:
         search_url = f"http://export.arxiv.org/api/query?search_query=all:{quote(topic)}&start=0&max_results={max_results}"
 
         try:
-            async with self.session.get(search_url) as response:
+            session = await self.session
+            async with session.get(search_url) as response:
                 if response.status == 200:
                     import xml.etree.ElementTree as ET
                     content = await response.text()

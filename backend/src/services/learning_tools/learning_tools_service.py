@@ -10,10 +10,10 @@ from datetime import datetime
 import random
 import re
 
-from ..models.textbook import Textbook
-from ..models.chapter import Chapter
-from ..models.section import Section
-from ..services.personalization.personalization_service import PersonalizationService
+from ...models.textbook import Textbook
+from ...models.chapter import Chapter
+from ...models.section import Section
+from ...services.personalization.personalization_service import PersonalizationService
 
 
 class LearningToolsService:

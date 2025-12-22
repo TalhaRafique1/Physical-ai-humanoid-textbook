@@ -3,17 +3,50 @@ Translation API Routes
 
 This module defines the API endpoints for textbook translation functionality.
 """
-from fastapi import APIRouter, HTTPException, Depends
-from typing import Dict, Any, List
+from fastapi import APIRouter, HTTPException, Depends, Header
+from typing import Dict, Any, List, Optional
 from datetime import datetime
 import logging
 import re
 
-from ...services.translation.translation_service import TranslationService
-from ...services.auth.auth_service import User, get_current_user
-from ...models.textbook import Textbook
-from ...models.chapter import Chapter
-from ...models.section import Section
+from ....services.translation.translation_service import TranslationService
+from ....services.auth.auth_service import AuthService, User
+from ....models.textbook import Textbook
+from ....models.chapter import Chapter
+from ....models.section import Section
+
+# Create auth service instance to get current user
+auth_service = AuthService()
+
+async def get_current_user(authorization: str = Header(None)) -> Optional[User]:
+    """
+    Get the current authenticated user from the authorization header.
+
+    Args:
+        authorization: Authorization header containing the token
+
+    Returns:
+        User object if authenticated, None otherwise
+    """
+    if not authorization:
+        return None
+
+    try:
+        # Extract token from "Bearer <token>" format
+        if authorization.startswith("Bearer "):
+            token = authorization[7:]
+        else:
+            token = authorization
+
+        # Get user by token
+        user = await auth_service.get_user_by_token(token)
+        if not user:
+            raise HTTPException(status_code=401, detail="Invalid or expired token")
+
+        return user
+    except Exception as e:
+        logger.error(f"Error getting current user: {str(e)}")
+        raise HTTPException(status_code=401, detail="Invalid or expired token")
 
 router = APIRouter()
 logger = logging.getLogger(__name__)

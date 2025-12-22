@@ -5,7 +5,7 @@
   "source": "@site/docs/humanoid-robotics/chapter-2-bipedal-locomotion.md",
   "sourceDirName": "humanoid-robotics",
   "slug": "/humanoid-robotics/chapter-2-bipedal-locomotion",
-  "permalink": "/ur/docs/humanoid-robotics/chapter-2-bipedal-locomotion",
+  "permalink": "/docs/humanoid-robotics/chapter-2-bipedal-locomotion",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/ai-textbook-project/textbook/tree/main/website/docs/humanoid-robotics/chapter-2-bipedal-locomotion.md",
@@ -18,10 +18,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Chapter 1: Introduction to Humanoid Robotics",
-    "permalink": "/ur/docs/humanoid-robotics/chapter-1-introduction-to-humanoids"
+    "permalink": "/docs/humanoid-robotics/chapter-1-introduction-to-humanoids"
   },
   "next": {
     "title": "Chapter 3: Humanoid Manipulation and Dexterity",
-    "permalink": "/ur/docs/humanoid-robotics/chapter-3-humanoid-manipulation"
+    "permalink": "/docs/humanoid-robotics/chapter-3-humanoid-manipulation"
   }
 }

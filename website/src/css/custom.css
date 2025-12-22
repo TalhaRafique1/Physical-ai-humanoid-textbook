@@ -395,6 +395,279 @@
   border-radius: 0 0 10px 10px;
 }
 
+/* Mobile responsiveness fixes */
+@media (max-width: 768px) {
+  /* Fix navbar on mobile */
+  .navbar {
+    padding: 0.6rem 0 !important;
+  }
+
+  .navbar__inner {
+    padding: 0 0.8rem !important;
+  }
+
+  .navbar__items {
+    min-width: 0;
+  }
+
+  /* Fix sidebar on mobile */
+  .menu {
+    padding: 1rem !important;
+  }
+
+  .menu__list-item {
+    margin: 0.2rem 0;
+  }
+
+  .menu__link {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.9rem;
+  }
+
+  /* Make sidebar links more touch-friendly */
+  .menu__list-item-collapsible {
+    margin: 0.3rem 0;
+  }
+
+  /* Fix table of contents on mobile */
+  .table-of-contents {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .table-of-contents__link {
+    padding: 0.2rem 0.4rem;
+  }
+
+  /* Fix doc content container */
+  .docItemContainer {
+    padding: 0 1rem;
+  }
+
+  /* Fix footer on mobile */
+  .footer__col {
+    padding: 0 1rem;
+  }
+
+  .footer__title {
+    font-size: 1rem;
+  }
+
+  /* Ensure proper text contrast in dark mode on mobile */
+  [data-theme='dark'] .menu__link {
+    color: #e2e8f0;
+  }
+
+  [data-theme='dark'] .menu__link:hover {
+    color: #f7fafc;
+  }
+
+  [data-theme='dark'] .menu__link--active {
+    color: #a0cfff;
+  }
+
+  /* Improve dark mode text visibility */
+  [data-theme='dark'] .navbar__title,
+  [data-theme='dark'] .navbar__link,
+  [data-theme='dark'] .navbar__item {
+    color: #e2e8f0 !important;
+  }
+
+  [data-theme='dark'] .navbar__link:hover,
+  [data-theme='dark'] .navbar__item:hover {
+    color: #f7fafc !important;
+  }
+
+  /* Better dark mode contrast for sidebar */
+  [data-theme='dark'] .menu__list-item {
+    color: #e2e8f0;
+  }
+
+  /* Fix mobile sidebar overlay */
+  .navbar-sidebar {
+    background-color: var(--ifm-navbar-background-color);
+  }
+
+  [data-theme='dark'] .navbar-sidebar {
+    background-color: var(--ifm-navbar-background-color);
+  }
+
+  /* Better mobile menu styling */
+  .navbar-sidebar__items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-sidebar__item {
+    margin: 0.5rem 0;
+  }
+
+  /* Mobile-friendly chat widget */
+  .chatContainer {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .chatButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Improve mobile typography */
+  .markdown h1 {
+    font-size: 1.8rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.5rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and below) */
+@media (max-width: 600px) {
+  .navbar__items--right {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .menu {
+    padding: 0.8rem !important;
+  }
+
+  .menu__link {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.85rem;
+  }
+
+  /* Ensure sidebar items are properly spaced */
+  .menu__list-item {
+    margin: 0.15rem 0;
+  }
+
+  /* Better mobile dark mode text visibility */
+  [data-theme='dark'] .navbar__title,
+  [data-theme='dark'] .navbar__link,
+  [data-theme='dark'] .navbar__item,
+  [data-theme='dark'] .menu__link,
+  [data-theme='dark'] .menu__list-item {
+    color: #f7fafc !important;
+  }
+
+  [data-theme='dark'] .menu__link--active {
+    color: #ffffff !important;
+  }
+
+  /* Ensure text is visible in dark mode */
+  [data-theme='dark'] {
+    --ifm-font-color-base: #f7fafc;
+    --ifm-menu-color: #e2e8f0;
+    --ifm-menu-color-active: #ffffff;
+    --ifm-menu-color-background-active: #2d3748;
+  }
+
+  /* Improve mobile menu background */
+  [data-theme='dark'] .navbar-sidebar {
+    background-color: #1a202c;
+  }
+
+  [data-theme='dark'] .menu {
+    background-color: #1a202c;
+  }
+}
+
+/* Fix for collapsible menu items on mobile */
+.menu__list-item-collapsible {
+  margin: 0.4rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.menu__list-item-collapsible .menu__link {
+  border-radius: 8px;
+}
+
+/* Ensure proper contrast in all modes */
+.navbar__link,
+.navbar__title,
+.menu__link,
+.table-of-contents__link {
+  transition: all 0.2s ease;
+}
+
+/* Better focus indicators for accessibility */
+.menu__link:focus,
+.navbar__link:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Fix sidebar navigation behavior on mobile */
+.navbar-sidebar .menu {
+  padding: 0.5rem !important;
+}
+
+.navbar-sidebar .menu__list,
+.navbar-sidebar .menu__list-item {
+  width: 100%;
+}
+
+.navbar-sidebar .menu__list-item {
+  margin: 0.1rem 0;
+}
+
+.navbar-sidebar .menu__link {
+  padding: 0.7rem 1rem !important;
+  width: 100%;
+  display: block;
+}
+
+.navbar-sidebar .menu__list-item-collapsible .menu__link {
+  border-radius: 8px;
+}
+
+/* Ensure collapsible items work properly in sidebar */
+.menu__list-item-collapsible {
+  position: relative;
+}
+
+.menu__list-item-collapsible .menu__caret {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.2s ease;
+}
+
+.menu__list-item-collapsible--show .menu__caret {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Mobile sidebar specific fixes */
+@media (max-width: 996px) {
+  .navbar-sidebar .menu {
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+  }
+
+  .navbar-sidebar .menu__list {
+    margin: 0;
+  }
+
+  .navbar-sidebar .menu__list-item {
+    margin: 0.05rem 0;
+  }
+
+  .navbar-sidebar .menu__link {
+    padding: 0.6rem 1rem !important;
+    margin: 0.1rem 0.5rem;
+  }
+}
+
 /* Footer enhancements */
 .footer {
   background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);

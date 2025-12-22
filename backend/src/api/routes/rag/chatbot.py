@@ -9,8 +9,8 @@ import logging
 import asyncio
 from datetime import datetime
 
-from ...services.rag.chatbot_service import RAGChatbotService
-from ...services.textbook_generation_service import TextbookGenerationService
+from ....services.rag.chatbot_service import RAGChatbotService
+from ....services.textbook_generation_service import TextbookGenerationService
 
 router = APIRouter()
 logger = logging.getLogger(__name__)

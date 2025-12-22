@@ -46,13 +46,6 @@ const config = {
           editUrl:
             'https://github.com/ai-textbook-project/textbook/tree/main/website/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/ai-textbook-project/textbook/tree/main/website/',
-        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -76,8 +69,8 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'intro',
             position: 'left',
             label: 'Textbook',
           },
